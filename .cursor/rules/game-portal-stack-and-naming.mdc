@@ -1,0 +1,26 @@
+---
+description: 技术栈、目录命名、多语言子路径、R2 静态资源
+alwaysApply: true
+---
+
+# 技术栈与工程约定
+
+## 技术栈（固定）
+
+- **Next.js（App Router）**、**TypeScript**、**Tailwind CSS**、**Shadcn UI**。
+
+## 命名规范
+
+- **目录**：`kebab-case`（例：`game-container`、`related-games`）。
+- **组件文件**：`PascalCase`（例：`GameContainer.tsx`）。
+- **工具/模块文件**：`camelCase`（例：`formatDate.ts`）。
+
+## 多语言路由
+
+- **必须**使用子路径形式：`/en/`、`/ko/`、`/es/` 等。
+- **禁止**：子域名多语言、仅靠前端 JS 切换语言而不生成独立 URL（避免权重分散与抓取不完整）。
+
+## 静态资源与 R2
+
+- 游戏 HTML 镜像、大图、视频等大流量静态资源**必须**走单独源站，并通过 Next **`assetPrefix`**（或等价 CDN 前缀）引用，托管在 **Cloudflare R2**，以降低 Vercel 带宽成本。
+- 具体前缀由环境变量配置；不在代码中硬编码密钥或桶凭证。

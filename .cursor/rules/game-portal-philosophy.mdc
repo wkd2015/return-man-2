@@ -1,0 +1,21 @@
+---
+description: 游戏站核心体验哲学 — 首屏即玩、iframe、一页一词
+alwaysApply: true
+---
+
+# 核心开发哲学
+
+## 首屏即游戏（Above the Fold）
+
+- 用户进入页面后**无需滚动**即可看到并点击「Play」开始游戏；核心交互不得放在第二屏。
+- **Aha Moment** 目标：进入后 **3 秒内** 可开始玩或进入明确的可恢复加载态（进度条、重试等）。
+
+## 纯 iframe 嵌入
+
+- 网站主体通过 **iframe** 加载 H5 游戏（来源示例：Scratch、cocrea.world、itch.io、或托管在 **Cloudflare R2** 的独立 HTML）。
+- 禁止用「滚动到下方才能玩」替代首屏入口。
+
+## 单一关键词原则（One Keyword, One Page）
+
+- **每个页面**（首页与内页）只针对**一个**具体关键词做深度优化。
+- **域名路径、Title、Description、Keywords（若使用）、H1** 必须与该关键词高度一致；避免一页多主词稀释。

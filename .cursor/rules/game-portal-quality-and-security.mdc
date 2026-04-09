@@ -1,0 +1,22 @@
+---
+description: 生成代码审核、Error Boundary、Turnstile、iframe 降级
+alwaysApply: true
+---
+
+# 代码质量与安全
+
+## Vibe Coding 审核（必做）
+
+- Cursor/AI 生成或修改代码后，**必须人工或二次 diff 审核**：
+  - 各语言版本**文案**是否被误改、混用。
+  - **Meta（Title/Description/canonical/OG 等）**是否与该页目标语言、目标关键词一致。
+- **严禁**不经审查就接受将英文 TDK 改成中文等破坏页面定位的改动。
+
+## 错误处理与降级
+
+- 实现**全局 Error Boundary**（及必要的路由级边界）。
+- **iframe 加载失败**、**API 超时**等场景提供清晰降级 UI（如重试、刷新、说明文案），避免白屏。
+
+## 人机验证
+
+- 在**敏感交互**（提交评论、注册、登录等）接入 **Cloudflare Turnstile**（或项目统一的人机验证方案），并与服务端校验配合。
