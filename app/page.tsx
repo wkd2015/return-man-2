@@ -113,7 +113,7 @@ export default function HomePage() {
             >
               <Sparkles className="size-4 text-amber-600 dark:text-amber-400" />
             </span>
-            Play Return Man 2 Online Now
+            Play Return Man 2 Unblocked Online Now
           </h2>
           <GameContainer iframeTitle="Return Man 2 — embedded game (unblocked)" />
         </section>
