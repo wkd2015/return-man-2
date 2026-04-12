@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Sparkles } from "lucide-react";
 
+import { AdSlot } from "@/components/ads/AdSlot";
 import { GameContainer } from "@/components/game/GameContainer";
 import { RelatedGames } from "@/components/game/RelatedGames";
 import { ReturnMan2SeoArticle } from "@/components/game/ReturnMan2SeoArticle";
@@ -104,6 +105,10 @@ export default async function LocaleHomePage({
           </div>
         </header>
 
+        <div className="flex justify-center border-b border-border/60 bg-muted/20 px-4 py-3 dark:border-white/10 dark:bg-zinc-900/40">
+          <AdSlot variant="leaderboard" slotId="hero-below" />
+        </div>
+
         <section
           className="border-b border-border/80 bg-gradient-to-b from-zinc-100 to-muted/40 px-4 py-5 dark:border-white/10 dark:from-zinc-900 dark:to-zinc-950"
           aria-labelledby="play-heading"
@@ -140,6 +145,10 @@ export default async function LocaleHomePage({
             <RelatedGames />
           </div>
         </section>
+
+        <div className="flex justify-center border-b border-border/60 bg-background px-4 py-6 dark:border-white/10 dark:bg-zinc-950/50">
+          <AdSlot variant="medium-rectangle" slotId="pre-content-seo" />
+        </div>
 
         <ReturnMan2SeoArticle />
       </article>

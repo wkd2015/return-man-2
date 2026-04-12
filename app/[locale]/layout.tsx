@@ -1,9 +1,9 @@
 import { notFound } from "next/navigation";
 
-const locales = ["en"] as const;
+import { LOCALES } from "@/lib/locales";
 
 export function generateStaticParams() {
-  return locales.map((locale) => ({ locale }));
+  return LOCALES.map((locale) => ({ locale }));
 }
 
 export default async function LocaleLayout({
@@ -14,7 +14,7 @@ export default async function LocaleLayout({
   params: Promise<{ locale: string }>;
 }>) {
   const { locale } = await params;
-  if (!locales.includes(locale as (typeof locales)[number])) {
+  if (!LOCALES.includes(locale as (typeof LOCALES)[number])) {
     notFound();
   }
 
