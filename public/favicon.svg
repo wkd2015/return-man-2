@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="none">
+  <title>Return Man 2</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="32" y2="32">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="turf" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+  </defs>
+  <rect width="32" height="32" rx="7" fill="url(#bg)"/>
+  <rect x="2" y="19" width="28" height="11" rx="2" fill="url(#turf)"/>
+  <line x1="6" y1="24" x2="26" y2="24" stroke="#fbbf24" stroke-width="0.9" opacity="0.75"/>
+  <ellipse cx="16" cy="12.5" rx="7.5" ry="4.8" fill="#fef9c3" stroke="#d97706" stroke-width="0.85"/>
+  <path d="M16 8.8v7.4" stroke="#ca8a04" stroke-width="0.75" stroke-linecap="round"/>
+  <path d="M12.5 11.2h7M12.5 13.8h7" stroke="#a16207" stroke-width="0.55" stroke-linecap="round" opacity="0.65"/>
+</svg>

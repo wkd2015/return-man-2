@@ -4,8 +4,11 @@
 
 | 变量 | 用途 | 示例格式 |
 |------|------|----------|
+| `NEXT_PUBLIC_SITE_URL` | 规范域名（canonical、OG、**favicon 等 metadata 绝对地址**） | `https://your-domain.com` |
 | `NEXT_PUBLIC_GA_MEASUREMENT_ID` | Google Analytics 4 | `G-XXXXXXXXXX` |
 | `NEXT_PUBLIC_CLARITY_PROJECT_ID` | Microsoft Clarity | 项目 ID 字符串 |
+
+生产环境务必配置 **`NEXT_PUBLIC_SITE_URL`** 为你的正式域名。未配置时，代码会回退使用 Vercel 提供的 `VERCEL_URL`（`https://xxx.vercel.app`）；仅本地开发使用 `http://localhost:3000`。
 
 ## Vercel Analytics
 
