@@ -1,5 +1,5 @@
 ---
-description: 技术栈、目录命名、多语言子路径、R2 静态资源
+description: 技术栈、目录命名、单语英文根路径、R2 静态资源
 alwaysApply: true
 ---
 
@@ -15,10 +15,10 @@ alwaysApply: true
 - **组件文件**：`PascalCase`（例：`GameContainer.tsx`）。
 - **工具/模块文件**：`camelCase`（例：`formatDate.ts`）。
 
-## 多语言路由
+## 语言与 URL（本项目）
 
-- **必须**使用子路径形式：`/en/`、`/ko/`、`/es/` 等。
-- **禁止**：子域名多语言、仅靠前端 JS 切换语言而不生成独立 URL（避免权重分散与抓取不完整）。
+- **纯英文站**：主内容与 SEO 页面使用**根路径** `/`（无 `/en` 等 locale 前缀）。
+- 若未来扩展多语言，再采用子路径（如 `/ko/`）并单独规划 sitemap / canonical；**禁止**子域名切语言、禁止仅靠前端切换而无独立 URL。
 
 ## 静态资源与 R2
 

@@ -21,7 +21,7 @@ export default function GlobalError({
           Try again
         </button>
         <a
-          href="/en"
+          href="/"
           className="text-sm text-amber-400 underline-offset-4 hover:underline"
         >
           Back to game

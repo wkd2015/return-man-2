@@ -21,13 +21,13 @@
 
 ## 架构要点
 
-- **路由**：多语言强制 `/{locale}/...`（如 `/en/`、`/ko/`），不用子域名、不用纯前端语言切换替代独立 URL。
+- **路由（当前实现）**：**纯英文单页**，主站与 canonical 使用**根路径** `/`（无 `/en` 等前缀）。若日后扩展多语言，再采用 `/{locale}/...`；仍禁止子域名与纯前端切换替代独立 URL。
 - **静态资源**：游戏镜像、大图、视频等经 **assetPrefix** 指向 **Cloudflare R2**，降低 Vercel 出口带宽；具体 URL 由后续环境变量配置。
 - **页面结构**（游戏详情类）：① 首屏 Game Container（iframe + 可选进度条 + 全屏/静音等）；② Related Games 网格；③ 底部 SEO 正文区（约 600–800 英文单词量级、含 How to play / FAQ / 评论组件等——具体文案语言随页面市场而定）。
 - **Technical SEO**：单 H1 含核心词；标题 50–60 字符、描述 150–160 字符带 CTA；canonical、OG、Twitter；JSON-LD（SoftwareApplication 或 VideoGame）；全图 `alt`；标题层级不跳级；核心词密度目标 **3%–5%**（发布前人工/工具复核）。
 - **运维**：Cloudflare Pages 场景保留 **`404.html`**，避免错误 URL 返回 200；新游戏页接入后 **sitemap 自动化** 并引导向 GSC/API 提交。
 - **体验与合规**：广告位固定尺寸防 CLS；移动优先首屏游戏入口与触控尺寸；全局 Error Boundary；iframe/接口失败降级；评论/注册等敏感操作接 **Cloudflare Turnstile**。
-- **流程**：Cursor 产出后必须 **复核多语言文案与 Meta**，禁止未审查即合并错误语言对的 TDK。
+- **流程**：Cursor 产出后必须 **复核英文 TDK 与正文**，若未来加 locale 再扩展为多语言审阅流程。
 
 ## 非目标（当前迭代）
 

@@ -16,7 +16,7 @@ alwaysApply: false
 
 ## 元标签（必选）
 
-- **canonical**：指向该页的规范 URL（含正确 locale 路径）。
+- **canonical**：指向该页的规范 URL（本项目首页为站点根 URL，无 locale 前缀）。
 - **Open Graph** 全套合理字段（`og:title`、`og:description`、`og:url`、`og:image` 等）。
 - **Twitter Card** 标签（与 OG 信息一致、无矛盾）。
 

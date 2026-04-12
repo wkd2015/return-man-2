@@ -35,7 +35,7 @@ export default function Error({
           Try again
         </Button>
         <Link
-          href="/en"
+          href="/"
           className={cn(buttonVariants({ variant: "outline" }))}
         >
           Back to game
