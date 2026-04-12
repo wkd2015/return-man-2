@@ -127,4 +127,10 @@
   html {
     @apply font-sans;
   }
+  h1,
+  h2 {
+    font-family: var(--font-barlow-condensed), var(--font-geist-sans), ui-sans-serif,
+      system-ui, sans-serif;
+    letter-spacing: 0.02em;
+  }
 }
