@@ -4,6 +4,7 @@ import { Sparkles } from "lucide-react";
 import { AdSlot } from "@/components/ads/AdSlot";
 import { GameContainer } from "@/components/game/GameContainer";
 import { RelatedGames } from "@/components/game/RelatedGames";
+import { UltimateGameGuides } from "@/components/game/UltimateGameGuides";
 import { ReturnMan2SeoArticle } from "@/components/game/ReturnMan2SeoArticle";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { RETURN_MAN_2_IFRAME_SRC } from "@/lib/game-config";
@@ -116,6 +117,23 @@ export default function HomePage() {
             Play Return Man 2 Unblocked Online Now
           </h2>
           <GameContainer iframeTitle="Return Man 2 — embedded game (unblocked)" />
+        </section>
+
+        <section
+          className="border-b border-border/80 bg-background px-4 py-10 dark:border-white/10 dark:bg-zinc-950/40"
+          aria-labelledby="guides-heading"
+        >
+          <h2
+            id="guides-heading"
+            className="mb-2 text-center text-2xl font-bold tracking-tight text-foreground"
+          >
+            Ultimate Game Guides
+          </h2>
+          <p className="mx-auto mb-8 max-w-2xl text-center text-sm text-muted-foreground sm:text-base">
+            In-depth Return Man 2 walkthrough and strategy guides — same site, no
+            install. Start with the ultimate guide below.
+          </p>
+          <UltimateGameGuides />
         </section>
 
         <section
